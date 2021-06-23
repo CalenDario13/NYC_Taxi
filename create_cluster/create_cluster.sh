@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$#" -ne 3 ]; then
-    echo "Usage: ./create_cluster.sh  bucket-name  region  zone"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: ./create_cluster.sh  bucket-name  cluster-name"
     exit
 fi
 
@@ -12,13 +12,10 @@ REGION=us-central1
 ZONE=us-central1-a
 INSTALL=gs://$BUCKET/install.sh
 
-#upload install 
-gsutil cp install.sh $INSTALL
-
 gcloud beta dataproc clusters create \
-   --num-workers=4 \
+   --num-workers=5 \
    --worker-machine-type=e2-standard-4 \
-   --master-machine-type=e2-standard-4 \
+   --master-machine-type=e2-standard-2 \
    --image-version=1.3-ubuntu18 \
    --enable-component-gateway \
    --optional-components=ANACONDA,JUPYTER \
