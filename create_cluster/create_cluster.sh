@@ -16,6 +16,8 @@ gcloud beta dataproc clusters create \
    --num-workers=5 \
    --worker-machine-type=e2-highmem-4 \
    --master-machine-type=e2-standard-2 \
+   --master-boot-disk-type=pd-ssd \
+   --worker-boot-disk-type=pd-ssd \
    --image-version=1.3-ubuntu18 \
    --enable-component-gateway \
    --optional-components=ANACONDA,JUPYTER \
