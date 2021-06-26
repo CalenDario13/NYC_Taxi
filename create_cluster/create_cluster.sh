@@ -13,7 +13,7 @@ ZONE=us-central1-a
 INSTALL=gs://$BUCKET/install.sh
 
 gcloud beta dataproc clusters create \
-   --num-workers=6 \
+   --num-workers=5 \
    --worker-machine-type=e2-highmem-4 \
    --master-machine-type=e2-standard-2 \
    --image-version=1.3-ubuntu18 \
