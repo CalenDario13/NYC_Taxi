@@ -23,4 +23,3 @@ gcloud beta dataproc clusters create \
    --region=$REGION \
    --initialization-actions=$INSTALL \
    $CLUSTER
-   
