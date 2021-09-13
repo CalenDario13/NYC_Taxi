@@ -8,4 +8,4 @@
 \
 ***BDC_project_data_briks.ipynb:*** is the notebook TO CHECK AND MARK
 \
-***nyc_comp.twb:***é is teh dasjboar for the EDA
+***nyc_comp.twb:*** is teh dasjboar for the EDA
